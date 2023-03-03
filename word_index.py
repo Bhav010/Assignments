@@ -19,7 +19,7 @@ print(f"{word[1]}: {ctr[1]}")
 '''
 
 #2 Using dictionary
-mydict = {'Father':0, 'God':0, 'Christ':0, 'Spirit':0, 'life':0, 'man':0}
+mydict = {'Father':0, 'God':0, 'Christ':0, 'Spirit':0, 'spirit':0, 'life':0, 'man':0}
 with open ('book of John text.txt', 'r') as myfile:
     for line in myfile:
         words = line.split()        #splits text/string into a list
