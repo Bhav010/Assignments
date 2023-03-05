@@ -19,13 +19,26 @@ print(f"{word[1]}: {ctr[1]}")
 '''
 
 #2 Using dictionary
-mydict = {'Father':0, 'God':0, 'Christ':0, 'Spirit':0, 'spirit':0, 'life':0, 'man':0}
+mydict = {'Father':0, 'God':0, 'Christ':0, 'Spirit':0, 'life':0, 'man':0}
+j={}
 with open ('book of John text.txt', 'r') as myfile:
     for line in myfile:
         words = line.split()        #splits text/string into a list
         for i in words:
             if i in mydict:
                 mydict[i] += 1
+                if i!= i.title():
+                    #print('Case different')
+                    #mydict[i]=i.title()
+                    #for i,[i] in mydict:
+                    mydict[i.title()].append(mydict[i]+1)
+                    #mydict[j] +=1
                 
 for key, value in mydict.items():
     print(key, ":", mydict[key])
+
+'''
+
+s = 'hello'
+print(s.title())            #capitalizes first letter
+'''
